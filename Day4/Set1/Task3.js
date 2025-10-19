@@ -2,11 +2,11 @@
 let obj = {a:1,b:2}
 
 function convertValue(obj){
-  // let result = {}
+  let result = {}
   for(const[key,value] of Object.entries(obj)){
-    console.log(`${value}:"${key}"`)
-    // result[value] = result[key]
+    // console.log(`${value}:"${key}"`)
+    result[value] = key
   }
-  // return result
+  return result
 }
-convertValue(obj)
+console.log(convertValue(obj))
