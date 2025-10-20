@@ -1,24 +1,13 @@
 //9. Write a program that checks if a given string is a valid email address.
 // function isValidEmail(str){
-//   let emailFormat = ['@','.','com']
-//   let letters = str.split(' ')
-//   for(let i=0; i< letters.length; i++){
 
-//   }
-//   return false
-// }
 // function isValidEmail(str){
-//   let email = ['@','.','com']
-//   let letters = str.split(' ')
-//   for(let i=0; i< letters.length; i++){
-//     if(letters[i].every(el => el.includes(email[i]))){
-//       return true
-//     }
-//   }
-//   return false
+//     return str.includes('@') && str.includes('.com')
 // }
+
 function isValidEmail(str){
-    return str.includes('@') && str.includes('.com')
+    let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+    return emailRegex.test(str)
 }
 console.log(isValidEmail('test@example.com'))
 console.log(isValidEmail('invalid.email.com'))
